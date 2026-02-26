@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto - Loja Joannalucia 🚀</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Novo Produto ✨</h1>
+                <p>Adicione um item incrível ao catálogo.</p>
+            </div>
+            <a href="../index.html" class="btn-back">← Voltar Home</a>
+        </header>
+
+        <main>
+            <div id="alert-message" class="alert hidden"></div>
+
+            <form id="form-cadastro" class="card-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome do Produto</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Teclado Mecânico Ninja..." required>
+                    </div>
+                </div>
+
+                <div class="form-row split-group">
+                    <div class="form-group">
+                        <label for="preco">Preço (R$)</label>
+                        <input type="number" id="preco" name="preco" step="0.01" min="0" placeholder="0.00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="Eletrônicos">💻 Eletrônicos</option>
+                            <option value="Móveis">🛋️ Móveis</option>
+                            <option value="Roupas">👕 Roupas</option>
+                            <option value="Alimentos">🍔 Alimentos</option>
+                            <option value="Outros">✨ Outros</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4" placeholder="Detalhes do seu produto..."
+                        required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary" id="btn-submit">
+                        <span class="btn-text">Cadastrar Produto</span>
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

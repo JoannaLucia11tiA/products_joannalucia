@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Loja Joannalucia 🚀</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Nosso Catálogo 🚀</h1>
+                <p>Navegue pela lista de produtos disponíveis.</p>
+            </div>
+            <a href="../index.html" class="btn-back">← Voltar Home</a>
+        </header>
+
+        <main>
+            <!-- Loading State -->
+            <div id="loading" class="state-container">
+                <div class="spinner-large"></div>
+                <p>Carregando produtos...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-message" class="state-container hidden">
+                <div class="icon-error">❌</div>
+                <h2>Ops! Algo deu errado.</h2>
+                <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>
+                <button onclick="location.reload()" class="btn-retry">Tentar Novamente</button>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="state-container hidden">
+                <div class="icon-empty">📭</div>
+                <h2>Nenhum produto encontrado</h2>
+                <p>Parece que nosso catálogo está vazio no momento.</p>
+                <a href="../cadastro/index.html" class="btn-primary-small">Cadastrar o Primeiro!</a>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="produtos-grid" class="produtos-grid hidden"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
